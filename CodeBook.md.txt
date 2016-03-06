@@ -1,0 +1,126 @@
+
+# Study Design
+
+Source data for this project was Human Activity Recognition Using Smartphones.The data linked to 
+from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. 
+A full description is available at the site where the data was obtained:
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+
+Data for the project was taken from :
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+# About R script
+
+R script *run_analysis.R* is used to clean, summarize and prepare tidy data set *secondarytidy.txt*
+Kindly refer **README.md** file for details. 
+
+1.Download and unzip the dataset if it does not already exist in the working directory
+2.Load the activity and feature info
+3.Loads training and test datasets extracting only those columns which reflect a mean or standard deviation
+4.Loads the activity and subject data for each dataset, and merges those columns with the dataset
+5.merge training and test datasets to create one data set and add labels
+5.Converts the activity and subject columns into factors
+7.Calculate average of each variable for each activity and each subject and prepare secondary tidy dataset 
+8.Write output of tidy data set  in the file secondarytidy.txt
+
+# Code Book
+
+This code book provides summary about dataset in *secondarytidy.txt*
+
+## Identifiers
+
+* subject - The ID of the test subject
+* activity - The type of activity performed when the corresponding measurements were taken
+
+## Measurements
+
+* "tBodyAccMeanX"              
+* "tBodyAccMeanY"               
+* "tBodyAccMeanZ"             
+*  "tBodyAccStdX"                
+* "tBodyAccStdY"                
+* "tBodyAccStdZ"                
+* "tGravityAccMeanX"            
+* "tGravityAccMeanY"            
+* "tGravityAccMeanZ"          
+*   "tGravityAccStdX"             
+* "tGravityAccStdY"            
+*  "tGravityAccStdZ"             
+* "tBodyAccJerkMeanX"        
+*   "tBodyAccJerkMeanY"           
+* "tBodyAccJerkMeanZ"          
+*  "tBodyAccJerkStdX"            
+* "tBodyAccJerkStdY"            
+* "tBodyAccJerkStdZ"            
+* "tBodyGyroMeanX"              
+* "tBodyGyroMeanY"              
+* "tBodyGyroStdX"               
+* "tBodyGyroStdY"              
+*  "tBodyGyroStdZ"               
+* "tBodyGyroJerkMeanX"           
+* "tBodyGyroJerkMeanY"          
+* "tBodyGyroJerkMeanZ"        
+*   "tBodyGyroJerkStdX"           
+* "tBodyGyroJerkStdY"           
+* "tBodyGyroJerkStdZ"           
+* "tBodyAccMagMean"            
+*  "tBodyAccMagStd"              
+* "tGravityAccMagMean"        
+*   "tGravityAccMagStd"           
+* "tBodyAccJerkMagMean"     
+*  "tBodyAccJerkMagStd"          
+* "tBodyGyroMagMean"           
+*  "tBodyGyroMagStd"             
+* "tBodyGyroJerkMagMean"     
+*  "tBodyGyroJerkMagStd"         
+*  "fBodyAccMeanX"             
+*  "fBodyAccMeanY"               
+* "fBodyAccMeanZ"              
+*  "fBodyAccStdX"                
+* "fBodyAccStdY"                
+* "fBodyAccStdZ"                
+* "fBodyAccMeanFreqX"       
+*  "fBodyAccMeanFreqY"           
+* "fBodyAccMeanFreqZ"      
+* "fBodyAccJerkMeanX"           
+* "fBodyAccJerkMeanY"         
+*  "fBodyAccJerkMeanZ"           
+* "fBodyAccJerkStdX"           
+*  "fBodyAccJerkStdY"            
+* "fBodyAccJerkStdZ"        
+*  "fBodyAccJerkMeanFreqX"       
+* "fBodyAccJerkMeanFreqY"     
+*  "fBodyAccJerkMeanFreqZ"       
+* "fBodyGyroMeanX"             
+*  "fBodyGyroMeanY"              
+* "fBodyGyroMeanZ"            
+*  "fBodyGyroStdX"               
+*  "fBodyGyroStdY"                
+* "fBodyGyroStdZ"               
+* "fBodyGyroMeanFreqX"         
+* "fBodyGyroMeanFreqY"          
+* "fBodyGyroMeanFreqZ"        
+*  "fBodyAccMagMean"             
+* "fBodyAccMagStd"              
+* "fBodyAccMagMeanFreq"         
+* "fBodyBodyAccJerkMagMean"  
+*  "fBodyBodyAccJerkMagStd"      
+* "fBodyBodyAccJerkMagMeanFreq" 
+* "fBodyBodyGyroMagMean"        
+* "fBodyBodyGyroMagStd"        
+*  "fBodyBodyGyroMagMeanFreq"    
+* "fBodyBodyGyroJerkMagMean"     
+* "fBodyBodyGyroJerkMagStd"     
+* "fBodyBodyGyroJerkMagMeanFreq"
+
+## Activity Labels
+
+1.WALKING (value 1): subject was walking during the test
+2.WALKING_UPSTAIRS (value 2): subject was walking up a staircase during the test
+3.WALKING_DOWNSTAIRS (value 3): subject was walking down a staircase during the test
+4.SITTING (value 4): subject was sitting during the test
+5.STANDING (value 5): subject was standing during the test
+6.LAYING (value 6): subject was laying down during the test
